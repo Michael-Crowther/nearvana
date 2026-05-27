@@ -1,0 +1,10 @@
+{
+  "extends": "@projectbid/typescript-config/react-library.json",
+  "compilerOptions": {
+    "paths": {
+      "@projectbid/ui/*": ["./src/*"]
+    }
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "dist"]
+}

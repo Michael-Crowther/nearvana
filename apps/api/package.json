@@ -1,0 +1,36 @@
+{
+  "name": "@projectbid/api",
+  "private": true,
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "esbuild --bundle --outfile=./dist/server.js --platform=node --target=node20 ./src/server.ts",
+    "zip": "zip -j lambda.zip dist/server.js",
+    "update": "aws lambda update-function-code --zip-file fileb://lambda.zip --function-name hello",
+    "deploy": "run-s build zip update",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "@types/pg": "^8.16.0",
+    "drizzle-kit": "^0.31.8",
+    "esbuild": "^0.21.4",
+    "npm-run-all2": "^6.2.0",
+    "tsx": "^4.21.0"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.7",
+    "@hono/trpc-server": "^0.4.1",
+    "@trpc/client": "^11.8.1",
+    "@trpc/server": "^11.8.1",
+    "better-auth": "^1.4.10",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.45.1",
+    "hono": "^4.11.3",
+    "pg": "^8.16.3",
+    "zod": "^4.2.1"
+  }
+}

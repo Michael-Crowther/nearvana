@@ -1,0 +1,3 @@
+{
+  "extends": "@projectbid/typescript-config/base.json"
+}
