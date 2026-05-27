@@ -2,11 +2,11 @@
 
 import { useUser } from "@/src/context/UserContext";
 import { redirect } from "next/navigation";
-import { authClient } from "@projectbid/auth";
-import { Button } from "@projectbid/ui/components/button";
-import { PrettyJson } from "@projectbid/ui/custom/PrettyJson";
+import { authClient } from "@nearvana/auth";
+import { Button } from "@nearvana/ui/components/button";
+import { PrettyJson } from "@nearvana/ui/custom/PrettyJson";
 import { useEffect } from "react";
-import { toast } from "@projectbid/ui/components/sonner";
+import { toast } from "@nearvana/ui/components/sonner";
 
 export default function Dashboard() {
   const { user } = useUser();

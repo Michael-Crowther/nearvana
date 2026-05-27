@@ -14,7 +14,7 @@
     "components": "@/components",
     "hooks": "@/hooks",
     "lib": "@/lib",
-    "utils": "@projectbid/ui/lib/utils",
-    "ui": "@projectbid/ui/components"
+    "utils": "@nearvana/ui/lib/utils",
+    "ui": "@nearvana/ui/components"
   }
 }

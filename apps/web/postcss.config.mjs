@@ -1,1 +1,1 @@
-export { default } from "@projectbid/ui/postcss.config";
+export { default } from "@nearvana/ui/postcss.config";

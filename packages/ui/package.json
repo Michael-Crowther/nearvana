@@ -1,5 +1,5 @@
 {
-  "name": "@projectbid/ui",
+  "name": "@nearvana/ui",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -35,8 +35,8 @@
     "@types/node": "^24.5.2",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
-    "@projectbid/eslint-config": "workspace:*",
-    "@projectbid/typescript-config": "workspace:*",
+    "@nearvana/eslint-config": "workspace:*",
+    "@nearvana/typescript-config": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^0.544.0",
     "tailwindcss": "^4.1.13",

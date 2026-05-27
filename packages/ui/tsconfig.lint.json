@@ -1,5 +1,5 @@
 {
-  "extends": "@projectbid/typescript-config/react-library.json",
+  "extends": "@nearvana/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist"
   },

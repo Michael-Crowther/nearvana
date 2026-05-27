@@ -1,10 +1,10 @@
-import "@projectbid/ui/globals.css";
+import "@nearvana/ui/globals.css";
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { UserProvider } from "../context/UserContext";
 import { TRPCReactProvider } from "../trpc/client";
-import { Toaster } from "@projectbid/ui/components/sonner";
+import { Toaster } from "@nearvana/ui/components/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ProjectBid",
+  title: "nearvana",
   description: "A new way of linking builders and subcontractors",
 };
 

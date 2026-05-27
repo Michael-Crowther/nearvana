@@ -1,14 +1,14 @@
 "use client";
 import { ChangeEventHandler, ComponentType, useState } from "react";
 import Image from "next/image";
-import { signInUser, signUpUser } from "@projectbid/auth";
+import { signInUser, signUpUser } from "@nearvana/auth";
 import LogoIdea from "../../../public/logo-idea.png";
-import { Card } from "@projectbid/ui/components/card";
-import { cn } from "@projectbid/ui/lib/utils";
+import { Card } from "@nearvana/ui/components/card";
+import { cn } from "@nearvana/ui/lib/utils";
 import { Hammer, Lock, Mail, User } from "lucide-react";
-import { Checkbox } from "@projectbid/ui/components/checkbox";
-import { Label } from "@projectbid/ui/components/label";
-import { Button } from "@projectbid/ui/components/button";
+import { Checkbox } from "@nearvana/ui/components/checkbox";
+import { Label } from "@nearvana/ui/components/label";
+import { Button } from "@nearvana/ui/components/button";
 import { BeatLoader } from "react-spinners";
 import {
   Select,
@@ -16,9 +16,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@projectbid/ui/components/select";
-import { Input } from "@projectbid/ui/components/input";
-import { toast } from "@projectbid/ui/components/sonner";
+} from "@nearvana/ui/components/select";
+import { Input } from "@nearvana/ui/components/input";
+import { toast } from "@nearvana/ui/components/sonner";
 
 export default function Login() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -35,7 +35,7 @@ export default function Login() {
       <div className="flex flex-col items-start">
         <Image
           src={LogoIdea}
-          alt="ProjectBid Logo"
+          alt="nearvana Logo"
           width="200"
           height="200"
           className="ml-6"
@@ -47,7 +47,7 @@ export default function Login() {
           }}
           className={cn(
             "rounded-xl h-123 sm:min-w-110 min-w-90 max-w-110 w-full flex-row mt-5",
-            isSignUp && "h-136"
+            isSignUp && "h-136",
           )}
         >
           <section className="w-full p-10 pt-5 h-full">
@@ -106,7 +106,7 @@ function SignInForm({ goToSignUp }: SignInFormProps) {
       <p
         className={cn(
           "text-destructive/80 text-xs transition-opacity duration-200 mt-2 font-semibold",
-          !errors && "opacity-0"
+          !errors && "opacity-0",
         )}
       >
         Invalid email or password
@@ -228,7 +228,7 @@ function SignUpForm({ onSuccess, goBack }: SignUpFormProps) {
       <p
         className={cn(
           "text-destructive/80 text-xs transition-opacity duration-200 font-semibold",
-          !errors && "opacity-0"
+          !errors && "opacity-0",
         )}
       >
         {errors ? errors[0] : "Error"}

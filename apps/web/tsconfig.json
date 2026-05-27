@@ -1,9 +1,9 @@
 {
-  "extends": "@projectbid/typescript-config/nextjs.json",
+  "extends": "@nearvana/typescript-config/nextjs.json",
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"],
-      "@projectbid/ui/*": ["../../packages/ui/src/*"]
+      "@nearvana/ui/*": ["../../packages/ui/src/*"]
     },
     "plugins": [
       {

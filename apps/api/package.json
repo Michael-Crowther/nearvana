@@ -1,5 +1,5 @@
 {
-  "name": "@projectbid/api",
+  "name": "@nearvana/api",
   "private": true,
   "main": "src/index.ts",
   "type": "module",

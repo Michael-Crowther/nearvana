@@ -11,10 +11,10 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@projectbid/ui/components",
-    "utils": "@projectbid/ui/lib/utils",
-    "hooks": "@projectbid/ui/hooks",
-    "lib": "@projectbid/ui/lib",
-    "ui": "@projectbid/ui/components"
+    "components": "@nearvana/ui/components",
+    "utils": "@nearvana/ui/lib/utils",
+    "hooks": "@nearvana/ui/hooks",
+    "lib": "@nearvana/ui/lib",
+    "ui": "@nearvana/ui/components"
   }
 }

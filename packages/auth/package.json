@@ -1,12 +1,12 @@
 {
-  "name": "@projectbid/auth",
+  "name": "@nearvana/auth",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
     "better-auth": "^1.4.15"
   },
   "devDependencies": {
-    "@projectbid/typescript-config": "workspace:*"
+    "@nearvana/typescript-config": "workspace:*"
   },
   "exports": {
     ".": {
