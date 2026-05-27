@@ -37,10 +37,6 @@ export default function Dashboard() {
     <div className="mx-auto max-w-7xl p-4 sm:px-6 lg:px-8">
       <Button onClick={handleSignout}>Signout</Button>
       <PrettyJson>{user}</PrettyJson>
-      {user?.role === "builder" && <p>This is the builder dashboard.</p>}
-      {user?.role === "subcontractor" && (
-        <p>This is the subcontractor dashboard.</p>
-      )}
     </div>
   );
 }

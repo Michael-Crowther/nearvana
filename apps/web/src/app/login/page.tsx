@@ -2,7 +2,6 @@
 import { ChangeEventHandler, ComponentType, useState } from "react";
 import Image from "next/image";
 import { signInUser, signUpUser } from "@nearvana/auth";
-import LogoIdea from "../../../public/logo-idea.png";
 import { Card } from "@nearvana/ui/components/card";
 import { cn } from "@nearvana/ui/lib/utils";
 import { Hammer, Lock, Mail, User } from "lucide-react";
@@ -33,13 +32,13 @@ export default function Login() {
         priority
       />
       <div className="flex flex-col items-start">
-        <Image
+        {/* <Image
           src={LogoIdea}
           alt="nearvana Logo"
           width="200"
           height="200"
           className="ml-6"
-        />
+        /> */}
         <Card
           style={{
             boxShadow:
@@ -197,7 +196,6 @@ function SignUpForm({ onSuccess, goBack }: SignUpFormProps) {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
-  const [role, setRole] = useState<"builder" | "subcontractor">();
   const [errors, setErrors] = useState<string[] | undefined>();
   const [loading, setLoading] = useState(false);
 
@@ -210,7 +208,6 @@ function SignUpForm({ onSuccess, goBack }: SignUpFormProps) {
       password,
       confirmPassword,
       name,
-      role,
     });
 
     if (res && "errors" in res) {
@@ -234,24 +231,6 @@ function SignUpForm({ onSuccess, goBack }: SignUpFormProps) {
         {errors ? errors[0] : "Error"}
       </p>
       <form onSubmit={onSubmit} className="flex flex-col gap-2 mt-2">
-        <div className="relative">
-          <Hammer className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-          <Select
-            onValueChange={(value: "builder" | "subcontractor") =>
-              setRole(value)
-            }
-            value={role}
-          >
-            <SelectTrigger className="w-full pl-10" size="lg">
-              <SelectValue placeholder="User Type" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="builder">Builder</SelectItem>
-              <SelectItem value="subcontractor">Subcontractor</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
         <CustomInput
           Icon={User}
           id="name"

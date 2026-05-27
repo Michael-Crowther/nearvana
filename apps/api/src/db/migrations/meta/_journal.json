@@ -8,6 +8,13 @@
       "when": 1767990093181,
       "tag": "0000_empty_screwball",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1779921477105,
+      "tag": "0001_grey_wendigo",
+      "breakpoints": true
     }
   ]
 }

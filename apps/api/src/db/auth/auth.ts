@@ -11,13 +11,4 @@ export const auth = betterAuth({
     enabled: true,
     autoSignIn: false,
   },
-
-  user: {
-    additionalFields: {
-      role: {
-        type: ["builder", "subcontractor"],
-        required: true,
-      },
-    },
-  },
 });

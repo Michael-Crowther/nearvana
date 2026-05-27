@@ -9,7 +9,6 @@ type UserContextType = {
     name: string;
     email: string;
     emailVerified: boolean;
-    role: "builder" | "subcontractor";
     image: string | null;
     createdAt: string;
     updatedAt: string;

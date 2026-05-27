@@ -5,14 +5,12 @@ export async function signUpUser({
   password,
   confirmPassword,
   name,
-  role,
   image,
 }: {
   email: string;
   password: string;
   confirmPassword: string;
   name: string;
-  role: "builder" | "subcontractor" | undefined;
   image?: string;
 }) {
   const errors: string[] | undefined = [];
@@ -23,11 +21,6 @@ export async function signUpUser({
   if (!name) errors.push("Name is required");
   if (password !== confirmPassword) errors.push("Passwords do not match");
 
-  if (!role) {
-    errors.push("Please select a user type");
-    return { status: "error", errors };
-  }
-
   if (errors.length > 0) {
     return { status: "error", errors };
   }
@@ -37,7 +30,6 @@ export async function signUpUser({
     password,
     name,
     image,
-    role,
     callbackURL: "/dashboard",
   });
 
