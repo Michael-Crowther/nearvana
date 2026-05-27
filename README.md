@@ -1,3 +1,27 @@
+# Nearvana Monorepo
+
+### ShadCn/UI and Tailwindcss v4 Monorepo, Separate Hono Backend
+
+## Usage
+
+in the root directory run:
+
+```bash
+pnpm install
+pnpm dev
+```
+
+## Adding components
+
+To add components to the app, run the following command at the root of the `web` app:
+
+```bash
+pnpm dlx shadcn@latest add button -c apps/web
+```
+
+This will place the ui components in the `packages/ui/src/components` directory.
+
+
 Nearvana — AI-Powered Local Discovery Platform
 
 Overview
